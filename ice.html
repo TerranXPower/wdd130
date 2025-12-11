@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ICE</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fraunces:wght@300;400;600;700&family=Libre+Baskerville:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<style>
+    .iceList {
+        margin-top: 30px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .iceRow {
+        display: grid;
+        grid-template-columns: 210px auto;
+        gap: 20px;
+        align-items: center;
+    }
+
+    .iceButton {
+        background-color: #A17B74;
+        border: 3px solid #453236;
+        border-radius: 8px;
+        color: white;
+        padding: 12px;
+        text-align: center;
+        text-decoration: none;
+        display: block;
+        font-weight: bold;
+        transition: transform 0.3s ease;
+    }
+
+    .iceButton:hover {
+        transform: scale(1.05);
+    }
+
+    .iceDescription {
+        background-color: #F1E7DD;
+        color: #453236;
+        padding: 12px;
+        border: 3px solid #453236;
+        border-radius: 8px;
+        margin: 0;
+        font-size: 15px;
+    }
+</style>
+
+<body>
+    <div id="wrapper">
+        <header>
+            <h1>ICE</h1>
+            <div class="logoCircle">
+                <img src="images/Logo.png" alt="Logo Icon">
+            </div>
+            <nav id="nav">
+
+            </nav>
+        </header>
+
+        <div class="iceList">
+
+            <div class="iceRow">
+                <a class="iceButton" href="ice/prophet_cards/nelson.html" target="_blank">Prophet Card</a>
+                <p class="iceDescription">
+                    This ICE challenge taught me how to open starter files in Visual Studio Code and update the HTML and CSS to build a prophet card. I learned how small edits change the layout and how to work with real project files.
+
+                </p>
+            </div>
+
+            <div class="iceRow">
+                <a class="iceButton" href="ice/apostle_spotlight/apostles.html" target="_blank">Apostle Spotlight</a>
+                <p class="iceDescription">
+                    This ICE challenge involved creating an Apostle Spotlight page. I learned to open starter files in VS Code, edit HTML and CSS, and convert a design into code. It improved my skills in web development and working with project files.
+
+                </p>
+            </div>
+
+            <div class="iceRow">
+                <a class="iceButton" href="ice/favorite_devo/favdevo.html" target="_blank">Favorite Devotionals</a>
+                <p class="iceDescription">
+                    This ICE challenge had me create a form and table in HTML to display favorite BYU-I devotionals. I learned to structure tables and forms in HTML and CSS, improving my ability to collect and present data on a webpage.
+
+                </p>
+            </div>
+
+            <div class="iceRow">
+                <a class="iceButton" href="ice/halloween/index.html" target="_blank">Holiday Page</a>
+                <p class="iceDescription">
+                    This ICE challenge focused on styling a holiday page using CSS without changing the HTML. I learned how to apply styles effectively and improve the visual design of a webpage while keeping the structure intact.
+
+                </p>
+            </div>
+
+            <div class="iceRow">
+                <a class="iceButton" href="ice/grid_flags/flags.html" target="_blank">Country Flags</a>
+                <p class="iceDescription">
+                    This ICE challenge focused on styling country flags using CSS grid. I learned how to arrange elements with grid layout and improve my skills in creating organized, visually appealing web pages.
+                </p>
+            </div>
+
+            <div class="iceRow">
+                <a class="iceButton" href="ice/positioning/positioning.html" target="_blank">Positioning</a>
+                <p class="iceDescription">
+                    This ICE challenge involved practicing CSS positioning and grid alignment. I learned how to place and align elements on a page precisely, which improved my layout and design skills.
+                </p>
+            </div>
+
+            <div class="iceRow">
+                <a class="iceButton" href="ice/gallery/gallery.html" target="_blank">Gallery</a>
+                <p class="iceDescription">
+                    This ICE Challenge focused on working with an image gallery. I learned how to edit images and adjust file sizes, which helped me practice using photo editing tools and managing web content efficiently.
+                </p>
+            </div>
+
+            <div class="iceRow">
+                <a class="iceButton" href="ice/signup/signup.html" target="_blank">Sign Up</a>
+                <p class="iceDescription">
+                    This ICE Challenge focused on designing a signup form. I learned how to style forms using CSS and incorporate basic JavaScript, which improved my skills in creating interactive and visually appealing web forms.
+                </p>
+            </div>
+
+        </div>
+
+        <footer>
+            <p>
+                <a href="index.html">Home</a> <br />
+                <a href="../wwr/index.html" target="_blank">WWR</a> <br />
+                <a href="ice.html">ICE</a> <br />
+                <a href="about_me.html">About Me</a>
+            </p>
+            <p>Copyright Carr 2025 ©</p>
+        </footer>
+    </div>
+</body>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        fetch('nav.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('nav').innerHTML = data;
+            });
+    });
+</script>
+
+</html>

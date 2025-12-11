@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xander Carr's Portal Page</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fraunces:wght@300;400;600;700&family=Libre+Baskerville:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<body>
+    <div id="wrapper">
+        <header>
+            <h1>Portal</h1>
+            <div class="logoCircle">
+                <img src="images/Logo.png" alt="Logo Icon">
+            </div>
+            <nav id="nav">
+                
+                
+            </nav>
+        </header>
+
+        <main>
+            <div class="imgBox">
+                <img src="images/white_water_rafting.jpg" alt="White Water Rafting"
+                    style="width:100%; height:100%; object-fit:cover; border-radius:8px;">
+            </div>
+
+            <div class="textBox">
+                <h2>White Water Rafting</h2>
+                Donec scelerisque sed ligula in porta. Vivamus ac venenatis ligula, sit amet pulvinar mauris. Mauris mi
+                leo, blandit at pretium ut, dictum ac magna. Curabitur ultricies, est id pulvinar imperdiet, ipsum nulla
+                pretium libero, nec vestibulum ante lectus et purus. In tristique sit amet velit et dignissim. Duis
+                suscipit turpis eu tortor pharetra, a tempus nunc lacinia. Sed pharetra lectus non hendrerit laoreet.
+                Pellentesque vel finibus eros, et aliquam ex. Donec neque est, consequat eu fringilla in, dictum vitae
+                arcu. Curabitur sollicitudin suscipit turpis, luctus blandit lorem vestibulum in.
+            </div>
+
+            <div class="textBox">
+                <h2>ICE</h2>
+                <ul>
+                    <li>Curabitur ultricies est id pulvinar imperdiet</li>
+                    <li>Donec scelerisque sed ligula</li>
+                    <li>Integer porttitor dolor sed</li>
+                    <li>Nulla vestibulum ante lectus</li>
+                    <li>Proin imperdiet lacus</li>
+                    <li>Morbi fringilla nunc vitae</li>
+                    <li>Vivamus ac venenatis ligula</li>
+                    <li>Phasellus nec lacus tortor</li>
+                    <li>Vestibulum tristique id dui in malesuada</li>
+                </ul>
+            </div>
+
+            <div class="imgBox">
+                <img src="images/ice.jpg" alt="ICE Image"
+                    style="width:100%; height:100%; object-fit:cover; border-radius:8px;">
+            </div>
+
+            <div class="imgBox">
+                <img src="images/about_me.jpg" alt="About Me Image"
+                    style="width:100%; height:100%; object-fit:cover; border-radius:8px;">
+            </div>
+
+            <div class="textBox">
+                <h2>About Me</h2>
+                Sed cursus et ipsum ac tempus. Cras fermentum ipsum eget egestas placerat. Aliquam malesuada eget magna
+                quis sagittis. Cras a augue condimentum, lobortis eros id, bibendum nulla. Quisque lacus dolor, mollis
+                eget urna in, rutrum aliquet ligula. Morbi purus purus, vulputate eu sem a, lobortis lobortis nunc.
+                Curabitur non consectetur risus. Morbi fringilla nunc vitae viverra congue. Nullam consectetur elit sit
+                amet libero tincidunt pretium. Ut pellentesque nibh sem, ut venenatis quam sagittis consequat. Quisque
+                varius, sapien mollis sodales pharetra, nisl ipsum laoreet elit, nec finibus tortor mauris vitae nisl.
+            </div>
+
+        </main>
+
+        <footer>
+            <p>
+                <a href="index.html">Home</a> <br />
+                <a href="../wwr/index.html" target="_blank">WWR</a> <br />
+                <a href="ice.html">ICE</a> <br />
+                <a href="about_me.html">About Me</a>
+            </p>
+            <p>Copyright Carr 2025 ©</p>
+        </footer>
+
+    </div>
+</body>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        fetch('nav.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('nav').innerHTML = data;
+            });
+    });
+</script>
+
+</html>

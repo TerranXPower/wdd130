@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Favorite Devotionals</title>
+  <link rel="stylesheet" href="styles/styles.css" />
+</head>
+
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="header-image">
+        <h1>My Favorite<br>Devotionals</h1>
+      </div>
+    </header>
+    <main>
+      <div class="content-box">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Speaker</th>
+              <th>Title</th>
+              <th>Location</th>
+              <th>Location</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Elder Jeffrey R. Holland</td>
+              <td>Remember Lot's Wife</td>
+              <td>Provo, Utah</td>
+              <td>January 13, 2009</td>
+            </tr>
+            <tr>
+              <td>President Henry J. Eyring</td>
+              <td>The Lord Will Multiply Thy Efforts</td>
+              <td>Rexburg, Idaho</td>
+              <td>September 11, 2018</td>
+            </tr>
+            <tr>
+              <td>President Bruce C. Kusch</td>
+              <td>Becoming Converted unto the Lord</td>
+              <td>Salt Lake City, Utah</td>
+              <td>September 13, 2022</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <form class="devo-form">
+          <h2>Add Your Favorite Devotional</h2>
+
+          <label for="speaker">Speaker:</label>
+          <input type="text" id="speaker" name="speaker" placeholder="Enter speaker name" required>
+
+          <label for="title">Title:</label>
+          <input type="text" id="title" name="title" placeholder="Enter devotional title" required>
+
+          <label for="location">Location:</label>
+          <input type="text" id="location" name="location" placeholder="Enter location" required>
+
+          <label for="year">Year:</label>
+          <input type="text" id="year" name="year" placeholder="Enter year" required>
+
+          <button type="submit">Submit Devotional</button>
+        </form>
+      </div>
+    </main>
+  </div>
+</body>
+
+</html>

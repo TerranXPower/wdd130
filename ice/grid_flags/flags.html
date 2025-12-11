@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flag</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Helvetica Neue', sans-serif;
+            background-color: gray;
+        }
+
+        header {
+            background-color: #222;
+            color: #fff;
+            padding: 0.75rem 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+            letter-spacing: 0.05rem;
+            text-transform: uppercase;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            margin: 0;
+            font-weight: 400;
+        }
+
+        main {
+            display: grid;
+            grid-template-columns: .1fr .1fr 1fr .1fr;
+            margin-top: 20px;
+        }
+
+        hr {
+            width: 100%;
+            grid-column: 1 / 5;
+        }
+
+        h2 {
+            grid-column: 2/3;
+        }
+
+        #blue {
+            background: blue;
+            grid-column: 1 / 2;
+            display: grid;
+            align-items: center;
+            justify-items: center;
+        }
+
+        #white {
+            background: white;
+            grid-column: 2 / 4;
+        }
+
+        #red {
+            background: red;
+            grid-column: 1 / 4;
+        }
+
+        #chile {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            height: 200px;
+            width: 300px;
+        }
+
+        .star {
+            width: 70px;
+            aspect-ratio: 1;
+            background: white;
+            clip-path: polygon(50% 0, 79% 90%, 2% 35%, 98% 35%, 21% 90%);
+        }
+
+        #denmark {
+            display: grid;
+            grid-template-columns: repeat(37, 8.11px);
+            grid-template-rows: repeat(28, 8.1px);
+            grid-column-gap: 0px;
+            grid-row-gap: 0px;
+            background-color: white;
+            width: 300px;
+        }
+
+        #dred1 {
+            background-color: red;
+            grid-area: 1 / 1 / 13 / 13;
+        }
+
+        #dred2 {
+            background-color: red;
+            grid-area: 17 / 1 / 29 / 13;
+        }
+
+        #dred3 {
+            background-color: red;
+            grid-area: 1 / 17 / 13 / 38;
+        }
+
+        #dred4 {
+            background-color: red;
+            grid-area: 17 / 17 / 29 / 38;
+        }
+
+        /*
+        #denmark {
+            display: grid;
+            grid-template-columns: 90px 200px;
+            grid-template-rows: repeat(2, 95px);
+            grid-column-gap: 25px;
+            grid-row-gap: 25px;
+            background-color: white;
+            width: 315px;
+        }
+
+        #dred1 {
+            background-color: red;
+            grid-area: 1 / 1 / 2 / 2;
+        }
+
+        #dred2 {
+            background-color: red;
+            grid-area: 1 / 2 / 2 / 3;
+        }
+
+        #dred3 {
+            background-color: red;
+            grid-area: 2 / 1 / 3 / 2;
+        }
+
+        #dred4 {
+            background-color: red;
+            grid-area: 2 / 2 / 3 / 3;
+        }
+
+
+        #finland {
+            display: grid;
+            grid-template-columns: 90px 200px;
+            grid-template-rows: repeat(2, 95px);
+            grid-column-gap: 45px;
+            grid-row-gap: 45px;
+            background-color: blue;
+            width: 335px;
+        }
+
+        #fwhite1 {
+            background-color: white;
+            grid-area: 1 / 1 / 2 / 2;
+        }
+
+        #fwhite2 {
+            background-color: white;
+            grid-area: 1 / 2 / 2 / 3;
+        }
+
+        #fwhite3 {
+            background-color: white;
+            grid-area: 2 / 1 / 3 / 2;
+        }
+
+        #fwhite4 {
+            background-color: white;
+            grid-area: 2 / 2 / 3 / 3;
+        }
+        */
+
+        #finland {
+            display: grid;
+            grid-template-columns: repeat(19, 15.8px);
+            grid-template-rows: repeat(11, 15.8px);
+            grid-column-gap: 0px;
+            grid-row-gap: 0px;
+            background-color: blue;
+            width: 300px;
+        }
+
+        #fwhite1 {
+            background-color: white;
+            grid-area: 1 / 1 / 5 / 6;
+        }
+
+        #fwhite2 {
+            background-color: white;
+            grid-area: 8 / 1 / 12 / 6;
+        }
+
+        #fwhite3 {
+            background-color: white;
+            grid-area: 1 / 9 / 5 / 20;
+        }
+
+        #fwhite4 {
+            background-color: white;
+            grid-area: 8 / 9 / 12 / 20;
+        }
+
+
+        #benin {
+            display: grid;
+            grid-template-columns: repeat(2, 100px);
+            grid-template-rows: repeat(2, 100px);
+            grid-column-gap: 0px;
+            grid-row-gap: 0px;
+        }
+
+        #bgreen {
+            background-color: green;
+            grid-area: 1 / 1 / 3 / 2;
+            ;
+        }
+
+        #byellow {
+            background-color: yellow;
+            grid-area: 1 / 2 / 2 / 3;
+            width: 200px;
+        }
+
+        #bred {
+            background-color: red;
+            grid-area: 2 / 2 / 3 / 3;
+            width: 200px;
+        }
+
+        #Italy {
+            display: grid;
+            grid-template-columns: repeat(3, 100px);
+            grid-template-rows: 1fr;
+            grid-column-gap: 0px;
+            grid-row-gap: 0px;
+            height: 200px;
+        }
+
+        #igreen {
+            background-color: #009246;
+            grid-area: 1 / 1 / 2 / 2;
+        }
+
+        #iwhite {
+            background-color: white;
+            grid-area: 1 / 2 / 2 / 3;
+        }
+
+        #ired {
+            background-color: #ce2b37;
+            grid-area: 1 / 3 / 2 / 4;
+        }
+
+        #CentralAfricanRepublic {
+            display: grid;
+            grid-template-columns: repeat(12, 25px);
+            grid-template-rows: repeat(4, 50px);
+            grid-column-gap: 0px;
+            grid-row-gap: 0px;
+        }
+
+        .yellowstar {
+            width: 45px;
+            aspect-ratio: 1;
+            background: yellow;
+            clip-path: polygon(50% 0, 79% 90%, 2% 35%, 98% 35%, 21% 90%);
+        }
+
+        #cblue {
+            background-color: #003082;
+            grid-area: 1 / 1 / 2 / 13;
+        }
+
+        #cwhite {
+            background-color: #FFFFFF;
+            grid-area: 2 / 1 / 3 / 13;
+        }
+
+        #cgreen {
+            background-color: #289728;
+            grid-area: 3 / 1 / 4 / 13;
+        }
+
+        #cyellow {
+            background-color: #ffce00;
+            grid-area: 4 / 1 / 5 / 13;
+        }
+
+        #cred {
+            background-color: #d21034;
+            grid-area: 1 / 6 / 5 / 8;
+        }
+
+        #cstar {
+            grid-area: 1 / 2 / 2 / 4;
+            display: grid;
+            place-items: center;
+        }
+
+        #Greece {
+            display: grid;
+            grid-template-columns: repeat(13, 23.077px);
+            grid-template-rows: repeat(9, 22.222px);
+            grid-column-gap: 0px;
+            grid-row-gap: 0px;
+        }
+
+        #gblue1 {
+            background-color: #0D5EAF;
+            grid-area: 1 / 1 / 2 / 14;
+        }
+
+        #gblue2 {
+            background-color: #0D5EAF;
+            grid-area: 3 / 1 / 4 / 14;
+        }
+
+        #gblue3 {
+            background-color: #0D5EAF;
+            grid-area: 5 / 1 / 6 / 14;
+        }
+
+        #gblue4 {
+            background-color: #0D5EAF;
+            grid-area: 7 / 1 / 8 / 14;
+        }
+
+        #gblue5 {
+            background-color: #0D5EAF;
+            grid-area: 9 / 1 / 10 / 14;
+        }
+
+        #gblue6 {
+            background-color: #0D5EAF;
+            grid-area: 1 / 1 / 6 / 6;
+        }
+
+        #gwhite1 {
+            background-color: white;
+            grid-area: 2 / 1 / 3 / 14;
+        }
+
+        #gwhite2 {
+            background-color: white;
+            grid-area: 4 / 1 / 5 / 14;
+        }
+
+        #gwhite3 {
+            background-color: white;
+            grid-area: 6 / 1 / 7 / 14;
+        }
+
+        #gwhite4 {
+            background-color: white;
+            grid-area: 8 / 1 / 9 / 14;
+        }
+
+        #gwhite5 {
+            background-color: white;
+            grid-area: 1 / 3 / 6 / 4;
+        }
+
+        #gwhite6 {
+            background-color: white;
+            grid-area: 3 / 1 / 4 / 6;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Using CSS Grid to make Country Flags</h1>
+    </header>
+    <main>
+        <h2>Chile</h2>
+        <div id="chile">
+            <div id="blue">
+                <div class="star"></div>
+            </div>
+            <div id="white"></div>
+            <div id="red"></div>
+        </div>
+        <hr>
+
+        <h2>Denmark</h2>
+        <div id="denmark">
+            <div id="dred1"></div>
+            <div id="dred2"></div>
+            <div id="dred3"></div>
+            <div id="dred4"></div>
+        </div>
+        <hr>
+
+        <h2>Finland</h2>
+        <div id="finland">
+            <div id="fwhite1"></div>
+            <div id="fwhite2"></div>
+            <div id="fwhite3"></div>
+            <div id="fwhite4"></div>
+        </div>
+        <hr>
+
+        <h2>Benin</h2>
+        <div id="benin">
+            <div id="bgreen"></div>
+            <div id="byellow"></div>
+            <div id="bred"></div>
+        </div>
+        <hr>
+
+        <h2>Italy</h2>
+        <div id="Italy">
+            <div id="igreen"></div>
+            <div id="iwhite"></div>
+            <div id="ired"></div>
+        </div>
+        <hr>
+
+        <h2>C.A.R.</h2>
+        <div id="CentralAfricanRepublic">
+            <div id="cblue"></div>
+            <div id="cwhite"></div>
+            <div id="cgreen"></div>
+            <div id="cyellow"></div>
+            <div id="cred"></div>
+            <div id="cstar">
+                <div class="yellowstar"></div>
+            </div>
+        </div>
+        <hr>
+
+        <h2>Greece</h2>
+        <div id="Greece">
+            <div id="gblue1"></div>
+            <div id="gblue2"></div>
+            <div id="gblue3"></div>
+            <div id="gblue4"></div>
+            <div id="gblue5"></div>
+            <div id="gwhite1"></div>
+            <div id="gwhite2"></div>
+            <div id="gwhite3"></div>
+            <div id="gwhite4"></div>
+            <div id="gblue6"></div>
+            <div id="gwhite5"></div>
+            <div id="gwhite6"></div>
+        </div>
+        <hr>
+    </main>
+</body>
+
+</html>
