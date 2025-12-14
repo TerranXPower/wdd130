@@ -1,7 +1,6 @@
 body {
     background: url("../images/sakura.jpg") repeat;
     background-size: 20%;
-    background-attachment: fixed;   /* keeps image visible while scrolling */
     font-family: "Libre Baskerville", serif;
     margin: 0;
     padding: 0;
