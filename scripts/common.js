@@ -12,9 +12,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
     document.head.appendChild(base);
 
-    // Load navigation relative to base
-    fetch("nav.html")
-        .then(response => response.text())
+    // Load navigation relative to base.href
+    fetch(base.href + "nav.html")
+        .then(response => {
+            if (!response.ok) throw new Error("Nav fetch failed");
+            return response.text();
+        })
         .then(data => {
             const nav = document.getElementById("nav");
             nav.innerHTML = data;
@@ -31,9 +34,12 @@ document.addEventListener("DOMContentLoaded", function () {
         })
         .catch(err => console.error("Failed to load nav:", err));
 
-    // Load footer relative to base
-    fetch("footer.html")
-        .then(response => response.text())
+    // Load footer relative to base.href
+    fetch(base.href + "footer.html")
+        .then(response => {
+            if (!response.ok) throw new Error("Footer fetch failed");
+            return response.text();
+        })
         .then(data => {
             document.getElementById("footerContent").innerHTML = data;
         })
