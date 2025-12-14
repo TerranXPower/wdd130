@@ -3,8 +3,6 @@ body {
     background: url("../images/sakura.jpg") repeat;
     background-size: 20%;
     font-family: "Libre Baskerville", serif;
-    margin: 0;
-    padding: 0;
 }
 
 #wrapper {
