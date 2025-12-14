@@ -12,8 +12,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     document.head.appendChild(base);
 
-    // Load navigation
-    fetch("/nav.html")
+    // Load navigation relative to base
+    fetch("nav.html")
         .then(response => response.text())
         .then(data => {
             const nav = document.getElementById("nav");
@@ -28,13 +28,15 @@ document.addEventListener("DOMContentLoaded", function () {
                     link.remove(); // remove only the current page link
                 }
             });
-        });
+        })
+        .catch(err => console.error("Failed to load nav:", err));
 
-    // Load footer
-    fetch("/footer.html")
+    // Load footer relative to base
+    fetch("footer.html")
         .then(response => response.text())
         .then(data => {
             document.getElementById("footerContent").innerHTML = data;
-        });
+        })
+        .catch(err => console.error("Failed to load footer:", err));
 
 });
