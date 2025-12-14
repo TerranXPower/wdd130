@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,6 +12,35 @@
 
     <link rel="stylesheet" href="styles/styles.css">
 </head>
+
+<style>
+    .reportBox {
+        background-color: #A17B74;
+        height: auto;
+        border-radius: 12px;
+        padding: 20px;
+        color: white;
+        font-size: 13px;
+        border: 4px solid #453236;
+        margin-top: 20px;
+        /* adds space above the box */
+    }
+
+    h3 {
+        margin: 5px;
+        font-family: "Fraunces", serif;
+        font-size: 20px;
+        color: pink;
+        text-decoration: underline;
+    }
+
+    .linkSpacing {
+        margin-right: 30px;
+        color: inherit;
+        text-decoration: none;
+    }
+</style>
+
 <body>
     <div id="wrapper">
         <header>
@@ -18,15 +48,53 @@
             <div class="logoCircle">
                 <img src="images/Logo.png" alt="Logo Icon">
             </div>
-            <nav id="nav">
-
-
-            </nav>
+            <nav id="nav"></nav>
         </header>
 
-    <footer id="footerContent">
+        <div class="reportBox">
+            <h2>Client Report</h2>
+            If you're reading this you made it here too early. I'm still working on the report so check back later! I
+            went to bed be back after chuch.
+            <h3>
+                <a href="https://danielviviers.github.io/wdd130-Carr/" target="_blank" class="linkSpacing">
+                    Carr
+                </a>
+            </h3>
+        </div>
 
-    </footer>
+        <div class="reportBox">
+            <h2>Lead Developer Report</h2>
+            If you're reading this you made it here too early. I'm still working on the report so check back later! I
+            went to bed be back after chuch.
+            <h3>
+                <a href="https://terranxpower.github.io/wdd130-ayim/" target="_blank" class="linkSpacing">
+                    Ayim
+                </a>
+            </h3>
+        </div>
+
+        <div class="reportBox"> 
+            <h2>Junior Developer Report</h2>
+            If you're reading this you made it here too early. I'm still working on the report so check back later! I
+            went to bed be back after chuch.
+            <h3>
+                <a href="https://mastersmeddy.github.io/wdd130-grumbles/" target="_blank" class="linkSpacing">
+                    Grumbles
+                </a>
+                <a href="#" class="linkSpacing"
+                    onclick="alert('Sorry, I never was sent anything from the lead developer!'); return false;">
+                    Heap
+                </a>
+            </h3>
+        </div>
+
+        <div class="reportBox">
+            <h2>General Experience and Reflections</h2>
+            If you're reading this you made it here too early. I'm still working on the report so check back later! I
+            went to bed be back after chuch.
+        </div>
+
+        <footer id="footerContent"></footer>
     </div>
 </body>
 
