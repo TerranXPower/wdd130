@@ -1,6 +1,7 @@
 if (window.location.pathname === "/wdd130/" || window.location.pathname === "/wdd130") {
     window.location.replace("index.html");
 }
+
 document.addEventListener("DOMContentLoaded", function () {
 
     // Set a base URL for GitHub Pages vs local
