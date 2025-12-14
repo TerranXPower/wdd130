@@ -1,16 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-    // Automatically determine base path for GitHub Pages
-    let basePath = "";
-    const pathSegments = window.location.pathname.split("/").filter(seg => seg.length > 0);
-
-    // If page is inside a subfolder, adjust base path
-    if (pathSegments.length > 1) {
-        basePath = "../".repeat(pathSegments.length - 1);
-    }
-
-    // Fetch nav
-    fetch(basePath + "nav.html")
+    fetch("/nav.html")
         .then(response => response.text())
         .then(data => {
             const nav = document.getElementById("nav");
@@ -27,8 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
             });
         });
 
-    // Fetch footer
-    fetch(basePath + "footer.html")
+    fetch("/footer.html")
         .then(response => response.text())
         .then(data => {
             document.getElementById("footerContent").innerHTML = data;
