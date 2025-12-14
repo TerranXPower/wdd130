@@ -1,5 +1,7 @@
 body {
-    background-color: black;
+    height: 100%;          /* ensures body and html cover the viewport */
+    margin: 0;
+    padding: 0;
     background: url("../images/sakura.jpg") repeat;
     background-size: 20%;
     font-family: "Libre Baskerville", serif;
